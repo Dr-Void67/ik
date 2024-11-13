@@ -1,0 +1,90 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "WAVE DETECTED🚫🚫",
+   LoadingTitle = "what the sigma💀 ( universal script nigga )",
+   LoadingSubtitle = "by Cyn",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "GGKJwVMRx7", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "key system rizzler",
+      Subtitle = "i like keys",
+      Note = "JOIN DISCORD FOR IT SPECIAL BOY",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"209Aaghya6-8037SILENT"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("🏠Main / AIM🏠", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+Rayfield:Notify({
+   Title = "hey men you did this cool",
+   Content = "injected",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "📂 Open UNIVERAL AIMBOT Pannel 📂",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "📜 Open UNIVERSAL AIMBOT Pannel 2 📜",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/loader.lua"))()", true))()
+   end,
+})
+
+local MainTab = Window:CreateTab("2️⃣ Secondary 2️⃣", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Secondary")
+
+local Button = MainTab:CreateButton({
+   Name = "📜 Open UNIVERAL ADMIN Pannel  📜",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/game-hax/uca/main/release/uca.min.lua"))()", true))()
+   end,
+})
+
+local MainTab = Window:CreateTab("🪽 fling 2️🪽", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("fling")
+
+local Button = MainTab:CreateButton({
+   Name = "😈 Open fling fucker 😈",
+   Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+       game.Players.LocalPlayer.Charactor.Huminoid.WalkSpeed = (Value)
+   end,
+})
